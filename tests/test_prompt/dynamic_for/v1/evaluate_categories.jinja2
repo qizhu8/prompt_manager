@@ -1,0 +1,23 @@
+Evaluate headline performance across categories:
+
+Headline: {{ headline }}
+Brand: {{ brand }}
+
+Check relevance for these categories:
+{% for category in categories %}
+- {{ category }}
+{% endfor %}
+
+For each category above:
+1. Rate relevance (1-10)
+2. Note key strengths
+3. Identify gaps
+
+Output format:
+{% for category in categories %}
+[{{ category }}]
+Relevance: <Relevance_{{ loop.index }}>score</Relevance_{{ loop.index }}>
+Strength: <Strength_{{ loop.index }}>text</Strength_{{ loop.index }}>
+Gap: <Gap_{{ loop.index }}>text</Gap_{{ loop.index }}>
+
+{% endfor %}

@@ -1,0 +1,26 @@
+{% if detail_level == 'high' %}
+Provide a DETAILED evaluation of the headline:
+- Include specific metrics and data points
+- Explain reasoning with examples
+- Suggest 2-3 improvements with justification
+
+Headline: {{ headline }}
+Brand: {{ brand }}
+{% elif detail_level == 'medium' %}
+Provide a STANDARD evaluation of the headline:
+- Key metrics and observations
+- Brief reasoning
+- One improvement suggestion
+
+Headline: {{ headline }}
+Brand: {{ brand }}
+{% else %}
+Provide a QUICK summary of the headline:
+- Overall assessment (good/fair/poor)
+- One key point
+
+Headline: {{ headline }}
+{% endif %}
+
+Output format:
+Assessment: <Assessment>your response</Assessment>

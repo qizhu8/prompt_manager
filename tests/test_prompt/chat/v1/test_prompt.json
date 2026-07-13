@@ -1,0 +1,18 @@
+{
+    "name": null,
+    "input_variables": [
+        "BrandName",
+        "ProductName",
+        "Url",
+        "WebContent"
+    ],
+    "optional_variables": [],
+    "output_parser": null,
+    "partial_variables": {},
+    "metadata": null,
+    "tags": null,
+    "template": "# [TASK] Given a brand, a product, and web content, generate a compact list of product features that would be helpful in generating marketing material. Make sure to read the web content and then summarize the feature out of that. Do not miss nor make up any product features.\n\nYou are a marketing executive with deep expertise across many industries. You are tasked with generating detailed, accurate and relevant sales points regarding the product in the Input section. Your listed features will later be used to guide the generation of marketing materials. So, please be considerate the following points:\n1. All features must come from the provided web content.\n2. The features should be relevant to the product and not just general information.\n3. The features should be concise and easy to understand, making them suitable for marketing purposes.\n\n## Research Guidelines\nUse your deep knowledge of all the products that you have seen and the scraped web content fields in the Input section. Some information in the Web Content field may not be relevant. Before adding to the output, ensure that the information is relevant to the product.\n\n## Guidelines for Feature Selection\n1. Feature is a short noun-phrase picked from the web content that encapsulates one unique aspect of the product. It's a short piece of text that pinpoints the most unique and outstanding aspect of a product. Don't include product name and brand name when summarizing the name of the feature. Please honor the wording, spelling, capitalization in the web content.\nFor instance,\n    - \"Auto-driving Aid System\" is a good feature, but \"Tesla Auto-driving Aid System\" is not because it includes the brand name.\n    - If the web content mention \"duel Engine\", you should also say \"duel Engine\" instead of \"Duel Engine\" or \"Duel-Engine\"\n2. To generate an organized feature, please first summarize the high-level sale directions of the product, and then list features for each direction. For instance, for automotive business, high-level directories could be \"Performance\", \"Safety\", \"Interior\", \"Info System.\n3, When organize your answer, pleast list the high-level direction first, and then include all features belongs to that direction. Please follow the output format section for details.\n4. Features with corresponding images is more attractive than features don't. List those features with images first.\n\n\n# Input:\nBrand Name: {BrandName}\nBrand URL: {Url}\nProduct Name: {ProductName}\nWeb Content: {WebContent}\n\n# Output format:\nRead the web content one more time and carefully organize your answer. Each direction is followed by features separated by comma. After that, use a semicolon to indicate the end of such direction.\nAnswer:\nDirection1: Feature1-1, Feature1-2, ...Feature1-N;\nDirection2: Feature2-1, Feature2-2, ...Feature2-N;\n...\nEND\n\n# Output:\nStart outputting the features and say \"END\" at the end of the output.\nAnswer:",
+    "template_format": "f-string",
+    "validate_template": true,
+    "_type": "prompt"
+}

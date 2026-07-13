@@ -1,0 +1,38 @@
+[build-system]
+requires = ["setuptools>=60", "setuptools-scm>=8.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["prompt_manager*"]
+exclude = ["tests*"]
+
+[tool.setuptools.package-data]
+"prompt_manager.visualizer" = ["static/*", "templates/*"]
+
+[project]
+name = "prompt_manager"
+version = "0.1.0"
+description = "A prompt template management system supporting CDEX, Jinja2, and LangChain formats"
+authors = [
+    {name = "Yu Wang", email = "umwangyu@gmail.com"}
+]
+license = {text = "MIT"}
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = [
+    "langchain-core>=0.1,<2", "jinja2"
+]
+
+[project.scripts]
+prompt-visualization = "prompt_manager.visualizer.prompt_visualization:main"
+
+[tool.flake8]
+max-line-length = 120
+exclude = [
+    ".git",
+    "__pycache__"
+]
+extend-ignore = [
+    "E203"
+]

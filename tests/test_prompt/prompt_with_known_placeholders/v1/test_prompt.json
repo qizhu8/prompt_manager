@@ -1,0 +1,16 @@
+{
+    "name": null,
+    "input_variables": [
+        "Data",
+        "Content"
+    ],
+    "optional_variables": [],
+    "output_parser": null,
+    "partial_variables": {},
+    "metadata": null,
+    "tags": null,
+    "template": "This is a test prompt for the completion API.\n\nInput: \"{Data}\"\n#Crawled Landing Page: \"{Content}\"\n#Result",
+    "template_format": "f-string",
+    "validate_template": true,
+    "_type": "prompt"
+}
