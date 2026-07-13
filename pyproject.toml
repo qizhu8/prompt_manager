@@ -23,6 +23,25 @@ requires-python = ">=3.9"
 dependencies = [
     "langchain-core>=0.1,<2", "jinja2"
 ]
+keywords = ["prompt", "llm", "template", "jinja2", "langchain", "prompt-engineering"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+
+[project.urls]
+Homepage = "https://github.com/qizhu8/prompt_manager"
+Repository = "https://github.com/qizhu8/prompt_manager"
+Issues = "https://github.com/qizhu8/prompt_manager/issues"
 
 [project.scripts]
 prompt-visualization = "prompt_manager.visualizer.prompt_visualization:main"
